@@ -1,0 +1,25 @@
+<main>
+    <div class="page">
+        <div class="header">
+          <h1 class="logo" style="font-size: 16px">Nistagram</h1>
+          <p>Sign up to see photos and videos from your friends.</p>
+          <p>Register as agent</p>
+          <p>.</p>
+        </div>
+        <div class="container">
+          <form>
+            <input type="text" placeholder="Email" name = "email" [(ngModel)]="userDto.email" >
+            <input type="text" placeholder="Name" name = "name" [(ngModel)]="userDto.name">
+            <input type="text" placeholder="Surname" name = "surname" [(ngModel)]="userDto.surname">
+            <input type="text" placeholder="Username" name = "username" [(ngModel)]="userDto.username">
+            <input type="password" placeholder="Password" name = "password" [(ngModel)]="userDto.password">
+            <input type="text" placeholder="Website" name = "password" [(ngModel)]="userDto.website">
+            <button (click) = "submit()">Sign up</button>
+          </form>
+        </div>
+    </div>
+    <div class="option">
+       <p>Have an account? <a routerLink="/login">Log in</a></p>
+    </div>
+  </main>
+  

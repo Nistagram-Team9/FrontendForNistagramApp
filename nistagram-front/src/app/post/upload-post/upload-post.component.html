@@ -1,0 +1,21 @@
+<main>
+    <div class="page">
+        <div class="header">
+          <h1 class="logo" style="font-size: 16px">Upload post</h1>
+         
+        </div>
+        <div class="container">
+         <form>
+
+           <p>Description: </p><input type="text" name = "description" [(ngModel)]="description">
+           <p>Tags: </p><input type="text" name = "tags" [(ngModel)]="tags">
+
+           <input type="file" (change)="onFileChanged($event)"><br><br>
+            
+        </form>
+            <button (click) = "uploadPost()">Save</button>
+         
+        </div>
+    </div>
+  </main>
+  

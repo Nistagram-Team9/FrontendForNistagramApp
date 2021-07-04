@@ -1,0 +1,63 @@
+<mat-toolbar class="navbar_style">
+    <mat-toolbar-row>
+        <h4 style="color: #ff9933; font-size: 120%;">Nistagram</h4>
+        <span class="spacer"></span>
+        <div position = "relative" *ngIf = "loggedUser.userRoleName === 'ROLE_USER'">
+            <button  style="margin-left: 10px;" mat-raised-button color="warn" (click)="trending()">Trending</button>
+            <div class="center">
+                <form>
+                    <input  type="text" name = "username" [(ngModel)]="userToSearch">
+                    <button style="margin-left: 10px;" mat-raised-button  (click)="searchProfiles()">Search profiles</button>
+
+                </form>
+            </div>
+            <button  style="position: relative; left: 20px"  mat-stroked-button color="warn" (click)="myPhotos()">My photos</button>
+            <button  style="position: relative; left: 10px"  mat-stroked-button color="warn" (click)="upload()">Upload</button>
+            <button  style="position: relative; left: 20px"  mat-stroked-button color="warn" (click)="followRequests()">Follow requests</button>
+
+            <button  style="position: absolute; right:360px;"  mat-stroked-button color="warn" (click)="dislikedContent()">Disliked content</button>
+            <button  style="position: absolute; right:230px;"  mat-stroked-button color="warn" (click)="likedContent()">Liked content</button>
+            <button  style="position: absolute; right:100px;"  mat-stroked-button color="warn" (click)="updateProfile()">Update profile</button>
+
+        </div>
+
+        <div position = "relative" *ngIf = "loggedUser.userRoleName === 'ROLE_ADMIN'">
+            <div class="center">
+              
+                    <input  type="text" name = "username" [(ngModel)]="userToSearch">
+                    <button style="margin-left: 10px;" mat-raised-button  (click)="searchProfiles()">Search profiles</button>
+
+            
+                <button  style="margin-left: 10px;" mat-raised-button color="warn" (click)="registerAgent()">Register agent</button>
+                <button  style="margin-left: 10px"  mat-stroked-button color="warn" (click)="agentRequests()">Agent requests</button>
+                <button  style="margin-left: 10px;" mat-raised-button (click)="reportedContent()">Reported content</button>
+            </div>
+        </div>
+
+        <div position = "relative" *ngIf = "loggedUser.userRoleName === 'ROLE_AGENT'">
+            <button  style="margin-left: 0px;" mat-raised-button color="warn" (click)="trending()">Trending</button>
+            <div class="center">
+                <form>
+                    <input  type="text" name = "username" [(ngModel)]="userToSearch">
+                    <button style="margin-left: 0px;" mat-raised-button  (click)="searchProfiles()">Search profiles</button>
+                    <button style="margin-left: 0px;" mat-raised-button  (click)="createCampaign()">Create campaign</button>
+
+                </form>
+            </div>
+
+            <button  style="position: relative; left: 0px"  mat-stroked-button color="warn" (click)="myPhotos()">Mine</button>
+            <button  style="position: relative; left: 0px"  mat-stroked-button color="warn" (click)="upload()">Upload</button>
+            <button  style="position: relative; left: 0px"  mat-stroked-button color="warn" (click)="followRequests()">Follow requests</button>
+            <button  style="position: absolute; right:330px;"  mat-stroked-button color="warn" (click)="dislikedContent()">Disliked content</button>
+            <button  style="position: absolute; right:210px;"  mat-stroked-button color="warn" (click)="likedContent()">Liked content</button>
+            <button  style="position: absolute; right:90px;"  mat-stroked-button color="warn" (click)="updateProfile()">Update profile</button>
+
+        </div>
+
+    
+
+        <button  style ="position: absolute; right:10px" mat-raised-button color="warn" (click)="logout()">Log Out</button>
+
+    </mat-toolbar-row>
+</mat-toolbar>
+<router-outlet></router-outlet>

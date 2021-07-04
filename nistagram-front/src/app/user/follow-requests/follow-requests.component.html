@@ -1,0 +1,27 @@
+
+
+<main>
+    <div class="page">
+        <div class="header">
+          <h1 class="logo" style="font-size: 16px">Follow requests</h1>
+          <!-- <p>Sign up to see photos and videos from your friends.</p>
+          <p>Register as agent</p>
+          <p>.</p> -->
+        </div>
+        <div class="container">
+            <table class="table table-striped">
+    
+                <tbody>
+                    <tr *ngFor="let user of followRequests" >
+                        <!-- <ngb-tab *ngIf="event.id && event.name && event.type && event.status && event.locationInfo">  -->
+                        <td>{{user.username}}</td>
+                        <td>{{user.name}}</td>
+                        <td>{{user.surname}}</td>
+                        <td> <button mat-raised-button  style="display: block; margin: auto;" (click) = "accept(user.id)" class="btn btn-danger" >Accept</button></td>
+                  
+                    </tr>
+                </tbody> 
+            </table>
+        </div>
+    </div>
+  </main>

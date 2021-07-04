@@ -1,0 +1,29 @@
+<main>
+    <div class="page">
+        <div class="header">
+          <h1 class="logo" style="font-size: 16px">Profile update</h1>
+          <!-- <p>Sign up to see photos and videos from your friends.</p>
+          <p>Register as agent</p>
+          <p>.</p> -->
+        </div>
+        <div class="container">
+          <form>
+           <p>Name: </p><input type="text" name = "name" [(ngModel)]="userDto.name">
+           <p>Surname: </p><input type="text" name = "surname" [(ngModel)]="userDto.surname">
+           <p>Email: </p><input type="text" name = "email" [(ngModel)]="userDto.email" >
+           <p>Phone number: </p><input type="text" name = "phoneNumber" [(ngModel)]="userDto.phoneNumber" >
+           <p>Gender: </p><input type="text" name = "sex" [(ngModel)]="userDto.sex" >
+           <p>Birth date: </p><input type="text" name = "birthDate" [(ngModel)]="userDto.birthDate" >
+           <p>Website: </p><input type="text" name = "website" [(ngModel)]="userDto.website" >
+           <p>Biography: </p><input type="text" name = "biography" [(ngModel)]="userDto.biography" >
+           <p>Is private: </p><input type="text" name = "isPrivate" [(ngModel)]="userDto.isPrivate" >
+           <p>Can be tagged: </p><input type="text" name = "canBeTagged" [(ngModel)]="userDto.canBeTagged" >
+           <p>Username: </p><input type="text" name = "username" [(ngModel)]="userDto.username" >
+           <p>Password: </p><input type="text" name = "password" [(ngModel)]="userDto.password" >
+
+            <button (click) = "saveUser()">Save</button>
+          </form>
+        </div>
+    </div>
+  </main>
+  

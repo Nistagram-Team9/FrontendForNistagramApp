@@ -1,0 +1,32 @@
+<main>
+    <div class="page">
+        <div class="header">
+          <h1 class="logo" style="font-size: 16px">Create campaign</h1>
+          <!-- <p>Sign up to see photos and videos from your friends.</p>
+          <p>Register as agent</p>
+          <p>.</p> -->
+        </div>
+        <div class="container">
+         <form>
+
+        
+           <p>Is short term: </p><input type="text" name = "isShortTerm" [(ngModel)]="isShortTerm">
+           <p>Start date: </p><input type="text" name = "startDate" [(ngModel)]="startDate">
+           <p>End date: </p><input type="text" name = "endDate" [(ngModel)]="endDate">
+           <p>How many times a day: </p><input type="text" name = "howManyTimesADay" [(ngModel)]="howManyTimesADay">
+           <p>Sex: </p><input type="text" name = "sex" [(ngModel)]="sex">
+           <p>Age group: </p><input type="text" name = "ageGroup" [(ngModel)]="ageGroup">
+           <p>Tags: </p><input type="text" name = "tags" [(ngModel)]="tags">
+           <p>Websites: </p><input type="text" name = "websites" [(ngModel)]="websitesString">
+
+
+           <input type="file" (change)="onFileChanged($event)" multiple><br><br>
+            
+        </form>
+            <button (click) = "createCampaign()">Create campaign</button>
+         
+        </div>
+    </div>
+  </main>
+  
+
