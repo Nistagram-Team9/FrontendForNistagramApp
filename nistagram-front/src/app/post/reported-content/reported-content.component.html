@@ -2,7 +2,8 @@
     <div class="float-child card" *ngFor="let post of posts; let i = index">
       <mat-grid-tile>
         <div class="card-body" style="margin: 30px; padding: 30px; text-align: center;">
-         
+        <img [src]="post.picture" width="220" height="220"/>
+
           <h5 class="card-title" style="color:  #0000ff;">{{post.description}}</h5>
           <button mat-stroked-button color="warn" (click)="delete(post.id)">Delete</button> 
 

@@ -59,8 +59,11 @@ export class ShowPostsComponent implements OnInit {
     this.postService.getPosts("maki").subscribe(
       (async response => {
         if (response !== null) {
-          // this.posts = response;
-          this.posts = await this.downloadPhotos(response)
+          this.posts = response;
+          console.log(this.posts)
+        
+          // alert(this.posts)
+          // this.posts = await this.downloadPhotos(response)
         }
       }),
       (error => {

@@ -43,6 +43,10 @@ export class PostService {
   getPosts(username: string) : Observable<any>{
     return this.http.get<any>(`${this.baseUrl}`+'/view/'+username);
   }
+
+  viewMyPosts() : Observable<any>{
+    return this.http.get<any>(`${this.baseUrl}`+'/view-my-posts');
+  }
   getFollowersPosts() : Observable<any>{
     return this.http.get<any>(`${this.baseUrl}`+'/followers');
   }

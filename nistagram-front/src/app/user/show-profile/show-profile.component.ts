@@ -185,13 +185,15 @@ export class ShowProfileComponent implements OnInit {
     console.log('uslo u get posts');
     this.postService.getPosts(this.user.username).subscribe(
       ( response => {
-        if (response !== null) {
           this.posts = response;
+          console.log("postsss")
+          console.log(this.posts)
           // this.posts = await this.downloadPhotos(response)
-        }
+        
       }),
       (error => {
-        //alert(error.error.message);
+        console.log("error")
+        alert(error.error.message);
      
       })
     );

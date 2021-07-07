@@ -42,7 +42,9 @@ export class HeaderComponent implements OnInit {
   }
 
   logout(){
-
+    localStorage.removeItem('currentUser');
+    this.router.navigate(['/dashboard']);
+    location.reload();
   }
 
   upload(){

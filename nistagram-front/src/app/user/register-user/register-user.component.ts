@@ -22,8 +22,8 @@ export class RegisterUserComponent implements OnInit {
 
 
   submit(){
-   
-    if (this.userDto.email === '' || this.userDto.name === '' || this.userDto.surname == "" || this.userDto.username == "" || this.userDto.password == "" || this.userDto.website == "") {
+   this.userDto.website=""
+    if (this.userDto.email === '' || this.userDto.name === '' || this.userDto.surname == "" || this.userDto.username == "" || this.userDto.password == "" ) {
       alert("All fields must be filled.")
 
     } else {

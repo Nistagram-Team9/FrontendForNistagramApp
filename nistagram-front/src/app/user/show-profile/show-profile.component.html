@@ -5,6 +5,9 @@
         <button style="margin-left: 10px;"  mat-stroked-button color="warn" (click)="disable()">Disable</button>
     </div>
 
+    <div  *ngIf = "user.website != ''">
+        <a href="user.website">user.website</a>
+    </div>
 </div>
 
 <div *ngIf = "isPrivate == false">
@@ -22,8 +25,10 @@
     <div *ngIf = "notFollowing == true">
         <button style="margin-left: 10px;"  mat-stroked-button color="warn" (click)="follow()">Follow</button>
     </div>
+    <div  *ngIf = "user.website != ''">
+        <a href="user.website">user.website</a>
+    </div>
     
-   
 </div>
 
 
@@ -34,7 +39,7 @@
     <div class="float-child card" *ngFor="let post of posts; let i = index">
       <mat-grid-tile>
         <div class="card-body" style="margin: 30px; padding: 30px; text-align: center;">
-         
+         <img [src]="post.picture" width="220" height="220"/>
           <h5 class="card-title" style="color:  #0000ff;">{{post.description}}</h5>
           <p>Likes: {{post.likedBy.length}}</p>
           <p>Dislikes: {{post.dislikedBy.length}}</p>
